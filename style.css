@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./background/desafio3/bg-repeat.jpg);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+
+    padding: 0 8rem;
+}
+
+.esquerda {
+    flex-basis: 45%;
+    height: 300px;
+    
+    color: #f0eded;
+
+}
+
+.esquerda h1 {
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+
+.esquerda > p {
+    display: inline-block;
+    font-size: 2.7rem;
+    font-weight: 300;
+    text-wrap: wrap;
+    width: 80%;
+    margin-top: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 44.0rem;
+    max-width: 44.0rem;
+    min-height: 50.0rem;
+    max-height: 50rem;
+    background-color: #f0eded;
+    padding: 3.5rem 2rem;
+    border-radius: 3px;
+}
+
+form > input,
+#mensagem {
+    min-width: 40rem; 
+    padding: 1.4rem 1.5rem;
+    border-radius: 0.7rem;
+    max-width: 40rem;
+    border: 1.59px solid #000;
+}
+
+#mensagem {
+    min-height: 4rem;
+}
+
+#enviar {
+    background: #3CCC87;
+    padding: 1.2rem 10rem;
+    border-radius: 0.5rem;
+    color: #f0eded;
+    font-size: 2rem;
+    font-weight: 600;
+}

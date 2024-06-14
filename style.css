@@ -214,3 +214,13 @@ form {
 	display: inline-block;
 	margin: 100px auto;
 }
+
+/* -------- ERROR MODAL --------- */
+#errorModal .icon-box {
+    background-color: #F52E2E;
+}
+
+#errorModal .btn {
+    background-color: #F52E2E;
+
+}

@@ -1,21 +1,42 @@
 const inputs = document.querySelectorAll(".inputs");
-const confirmButton = document.querySelectorAll("#enviar");
+const confirmButton = document.querySelector("#enviar");
+const form = document.getElementById("contactForm");
 
 inputs.forEach(input => {
     input.addEventListener("blur", () => {
         input.classList.remove("invalidado");
         input.classList.remove("validado");
 
-        if (input.value == "") {
+        if (input.value === "") {
             input.classList.add("invalidado");
         } else {
             input.classList.add("validado");
         }
-        
     });
-
 });
 
-function enviarFormulario() {
-    window.location = "#myModal";
-}
+confirmButton.addEventListener('click', function (event) {
+    let todosPreenchidos = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+            todosPreenchidos = false;
+            input.classList.add("invalidado");
+        } else {
+            input.classList.remove("invalidado");
+        }
+    });
+
+    if (todosPreenchidos) {
+        $('#myModal').modal('show');
+
+        inputs.forEach(input => {
+            input.classList.remove("validado");
+            input.classList.remove("invalidado");
+
+            input.value = "";
+        });
+    } else {
+        $('#errorModal').modal('show');
+    }
+});

@@ -4,15 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,19 +24,18 @@
             <p>caso tenha ficado com qualquer dúvida basta nos mandar uma mensagem e entraremos em contato em menos de
                 24h.</p>
         </div>
-        <form action="" method="post">
+        <form id="contactForm" action="" method="post">
             <input type="text" id="nome" placeholder="Nome Completo *" name="nome" required class="inputs">
             <input type="email" id="email" placeholder="Email *" name="email" required class="inputs ">
             <input type="tel" id="telefone" placeholder="Telefone *" name="telefone" class="inputs">
-            <textarea id="mensagem" placeholder="Mensagem *" name="mensagem" rows="4" required
-                class="inputs"></textarea>
+            <textarea id="mensagem" placeholder="Mensagem *" name="mensagem" rows="4" required class="inputs"></textarea>
             <p id="aviso">* campos obrigatórios</p>
 
-            <a id="enviar" onclick="enviarFormulario()" href="#myModal" data-toggle="modal">Enviar</a>
+            <button type="button" id="enviar" class="btn btn-primary">Enviar</button>
         </form>
     </main>
     
-    <!-- Modal HTML -->
+    <!-- Modal de Sucesso -->
     <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-confirm">
             <div class="modal-content">
@@ -61,7 +55,26 @@
         </div>
     </div>   
 
-  
+    <!-- Modal de Erro -->
+    <div id="errorModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="icon-box">
+                        <i class="material-icons">&#xE5CD;</i>
+                    </div>				
+                    <h4 class="modal-title w-100">Erro!</h4>	
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Por favor, preencha todos os campos obrigatórios.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger btn-block" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

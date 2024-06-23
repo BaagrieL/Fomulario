@@ -1,6 +1,5 @@
 const inputs = document.querySelectorAll(".inputs");
 const confirmButton = document.querySelector("#enviar");
-const form = document.getElementById("contactForm");
 
 inputs.forEach(input => {
     input.addEventListener("blur", () => {
@@ -16,6 +15,8 @@ inputs.forEach(input => {
 });
 
 confirmButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    
     let todosPreenchidos = true;
 
     inputs.forEach(input => {
